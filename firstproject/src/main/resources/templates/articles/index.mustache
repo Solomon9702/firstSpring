@@ -9,16 +9,15 @@
     </tr>
     </thead>
     <tbody>
-    {{#article}}
-    <tr>
-        <th>{{id}}</th>
-        <td>{{title}}</td>
-        <td>{{content}}</td>
-    </tr>
-    {{/article}}
+    {{#articleList}}
+        <tr>
+            <th>{{id}}</th>
+            <td><a href="/articles/{{id}}">{{title}}</a></td>
+            <td>{{content}}</td>
+        </tr>
+    {{/articleList}}
     </tbody>
 </table>
-
-<a href="/articles">Go to Article List</a>
+<a href="/articles/new">New Article</a>
 
 {{>layouts/footer}}
