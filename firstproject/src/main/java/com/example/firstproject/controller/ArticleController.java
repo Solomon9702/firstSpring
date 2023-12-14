@@ -31,7 +31,7 @@ public class ArticleController {
         // 1. Dto를 변환! Entitiy로!
         Article article = form.toEntity();
         log.info(article.toString());
-        // System.out.println(article.toString());
+        //System.out.println(article.toString());
 
         // 2.Repository에게 Entity를 DB안에 저장하게 함!
         Article saved = articleRepository.save(article);
@@ -65,5 +65,16 @@ public class ArticleController {
 
         // 3: 뷰 페이지를 설정!
         return "articles/index";  // articles/index.mustache
+    }
+    @GetMapping("/articles/{id}/edit")
+    public String edit(@PathVariable Long id, Model model){
+        // 수정할 데이터를 가져오기!
+        Article articleEntity = articleRepository.findById(id).orElse(null);
+
+        // 모델에 데이터를 등록!
+        model.addAttribute("article", articleEntity);
+
+        // 뷰 페이지 설정
+        return "articles/edit";
     }
 }
