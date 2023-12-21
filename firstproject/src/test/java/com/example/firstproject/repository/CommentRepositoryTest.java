@@ -15,7 +15,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @DataJpaTest //JPA와 연동한 테스트!
 class CommentRepositoryTest {
-    @Autowired CommentRepository commentRepository;
+    @Autowired
+    CommentRepository commentRepository;
 
     @Test
     @DisplayName("특정 게시글의 모든 댓글 조회")
@@ -39,6 +40,32 @@ class CommentRepositoryTest {
             // 검증
             assertEquals(expected.toString(), comments.toString(), "4번 글의 모든 댓글을 출력!");
         }
+
+        /* Case 2: 1번 게시글의 모든 댓글 조회 */
+        {
+            // 입력 데이터 준비
+            Long articleId = 1L;
+
+            // 실제 수행
+            List<Comment> comments=commentRepository.findByArticleId(articleId);
+
+            // 예상하기
+            Article article = new Article(1L, "가가가가", "1111");
+            List<Comment> expected = Arrays.asList();
+
+
+            // 검증
+            assertEquals(expected.toString(), comments.toString(), "1번 글은 댓글이 없음");
+        }
+
+        /* Case 3: 9번 게시글의 모든 댓글 조회 */
+
+
+        /* Case 4: 9999번 게시글의 모든 댓글 조회 */
+
+
+        /* Case 5: -1번 게시글의 모든 댓글 조회 */
+
     }
 
     @Test
