@@ -16,6 +16,13 @@ repositories {
 }
 
 dependencies {
+	// PostgreSQL 드라이버 추가!
+	runtimeOnly 'org.postgresql:postgresql'
+
+	// Oracle 드라이버 추가
+
+	// MySQL 드라이버 추가
+
 	// 롬복 추가!
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
