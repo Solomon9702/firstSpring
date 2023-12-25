@@ -1,6 +1,6 @@
-INSERT INTO article(id, title, content) VALUES(1, '가가가가', '1111');
-INSERT INTO article(id, title, content) VALUES(2, '나나나나', '2222');
-INSERT INTO article(id, title, content) VALUES(3, '다다다다', '3333');
+INSERT INTO article(id,title, content) VALUES(1, '가가가가', '1111');
+INSERT INTO article(id,title, content) VALUES(2, '나나나나', '2222');
+INSERT INTO article(id,title, content) VALUES(3, '다다다다', '3333');
 
 
 -- article 더미 데이터
@@ -11,9 +11,9 @@ INSERT INTO article(title, content) VALUES('당신의 취미는?', '댓글 고�
 
 -- comment 더미 데이터
 -- 4번 게시글의 댓글들
-INSERT INTO comment(article_id, nickname, body) VALUES(4, 'Park', '굳 윌 헌팅');
+INSERT INTO comment(article_id, nickname, body) VALUES(4, 'Park', '굿 윌 헌팅');
 INSERT INTO comment(article_id, nickname, body) VALUES(4, 'Kim', '아이 엠 샘');
-INSERT INTO comment(article_id, nickname, body) VALUES(4, 'Choi', '쇼생크의 탈출');
+INSERT INTO comment(article_id, nickname, body) VALUES(4, 'Choi', '쇼생크 탈출');
 
 
 ---- 5번 게시글의 댓글들

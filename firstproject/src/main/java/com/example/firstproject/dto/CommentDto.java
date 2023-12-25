@@ -11,10 +11,10 @@ import lombok.ToString;
 @Getter
 @ToString
 public class CommentDto {
-    private Long id;
-    private Long articleId;
-    private String nickname;
-    private String body;
+    private Long id;  // 댓글의 id
+    private Long articleId;  // 댓글의 부모 id
+    private String nickname;  // 댓글 작성자
+    private String body;  // 댓글 본문
 
     public static CommentDto createCommentDto(Comment comment) {
         return new CommentDto(
