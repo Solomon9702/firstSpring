@@ -1,5 +1,6 @@
 {{>layouts/header}}
 
+<<<<<<< HEAD
 
 <div>
     <table class="table">
@@ -25,3 +26,26 @@
 
 
 {{>layouts/footer}}
+=======
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#articleList}}
+        <tr>
+            <th>{{id}}</th>
+            <td><a href="/articles/{{id}}">{{title}}</a></td>
+            <td>{{content}}</td>
+        </tr>
+    {{/articleList}}
+    </tbody>
+</table>
+<a href="/articles/new">New Article</a>
+
+{{>layouts/footer}}
+>>>>>>> 078b600457acc813b10bc845b2bc9ea01df37566
